@@ -1,7 +1,7 @@
 # Criado por https://www.toptal.com/developers/gitignore/api/node
 # Edite em https://www.toptal.com/developers/gitignore?templates=node
 
-### Nó ###
+### node ###
 # Registros
 registros
 *.registro
@@ -43,7 +43,7 @@ componentes do bower
 construir/lançar
 
 # Diretórios de dependência
-módulos_nó/
+módulos_node/
 pacotes_jspm/
 
 # Diretório de dependências do Snowpack (https://snowpack.dev/)

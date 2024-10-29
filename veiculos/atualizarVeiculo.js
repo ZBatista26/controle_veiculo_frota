@@ -1,6 +1,6 @@
 const {veiculos } = require("./veiculos")
 
-function atualiazarVeiculo(id, novoMarca, novoModelo, novoPlaca, novoStatus, novoQuilometragemAtual, novoMotoristaDesignado, novoDataUltimaManutencao) {
+function atualiazarVeiculo(novoMarca, novoModelo, novoPlaca, novoStatus, novoQuilometragemAtual, novoMotoristaDesignado, novoDataUltimaManutencao) {
     try {
         const veiculo = veiculos.find(veiculo =>
             veiculo.id === id
