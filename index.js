@@ -21,10 +21,10 @@ const { lerVeiculo } = require("./veiculos/lerVeiculo");
 
 function exibirMenu() {
     console.log("=================================")
-    console.log("1 - Criar Veiculo")
-    console.log("2 - Atualizar Veiculo")
-    console.log("3 - Excluir Veiculo")
-    console.log("4 - Ler aluno")
+    console.log("1 - Criar Veículo")
+    console.log("2 - Atualizar Veículo")
+    console.log("3 - Deletar Veículo")
+    console.log("4 - Ler Veículo")
     console.log("5 - Sair do sistema")
     console.log("=================================")
 }
@@ -36,32 +36,34 @@ do {
 
     switch (opcao) {
      case 1:
-        id = prompt("Digite o id: ")
+         id = prompt("Digite o id: ")
         let marca = prompt("Digite a marca: ")
         let modelo = prompt("Digite o modelo: ")
         let placa = prompt("Digite o número da placa: ")
         let status = prompt("Status do carro: ")
         let quilometragemAtual = prompt("Digite a quilometragem Atual: ")
         let motoristaDesignado = prompt("Nome do motorista designado: ")
-        criarAluno(marca, modelo, placa, status, quilometragemAtual, motoristaDesignado)
-        listarAluno()
+        let dataUltimaManutencao = prompt("Data da última manutenção:")
+        criarVeiculo(id, marca, modelo, placa, status, quilometragemAtual, motoristaDesignado, dataUltimaManutencao)
+        lerVeiculo()
         break;
      case 2:
         id = prompt("Digite o id: ")
         let novoMarca = prompt("Digite uma nova marca: ")
         let novoModelo = prompt("Digite um novo modelo: ")
         let novoPlaca = prompt("Digite um número novo de placa: ")
-        let novoStatus = prompt("Digite o status novo:")
+        let novoStatus = prompt("Digite o status novo: ")
         let novoQuilometragemAtual = prompt("Digite a quilometragem nova: ")
-        let novoMotoristaDesignado = prompt("Novo motorista designado:")
-        editarAluno(matricula, novoMarca, novoModelo, novoPlaca, novoPlaca, novoStatus, novoQuilometragemAtual, novoMotoristaDesignado)
+        let novoMotoristaDesignado = prompt("Novo motorista designado: ")
+        let novoDataUltimaManutencao = prompt("Nova data da última manutenção: ")
+        atualiazarVeiculo(id, novoMarca, novoModelo, novoPlaca, novoStatus, novoQuilometragemAtual, novoMotoristaDesignado, novoDataUltimaManutencao)
         break;
      case 3:
-        matricula = prompt("Digite o id do veiculo: ")
-        excluirAluno(matricula)
+        id = prompt("Digite o id do veículo: ")
+        deletarVeiculo(id)
         break;
      case 4:
-        listarAluno()
+        lerVeiculo()
         break;
      case 5:
         console.log("sair do sistema...")
